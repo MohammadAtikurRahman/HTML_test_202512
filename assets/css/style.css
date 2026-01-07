@@ -9,22 +9,44 @@
 
 .nav-links li {
     display: inline-block;
+
 }
 
 .nav-links li a {
     text-decoration: none;
-    color: grey;
-    font-size: 1.07rem;
+    color: rgb(44, 43, 43);
+    font-size: 1.03rem;
     margin-right: 15px;
 
 }
 
 .hero {
     text-align: center;
+    position: relative;
+    z-index: -1;
 
 }
 
 .hero img {
-    width:71.5%;
+    transform: translateY(-62px);
+    width: 71.5%;
     height: auto;
+}
+
+.hero h1 {
+
+    transform: translateY(-470px);
+    font-family: 'Pacifico', cursive;
+    color: aliceblue;
+
+
+}
+
+.hero h2 {
+
+    font-family: 'Roboto', sans-serif;
+    transform: translateY(-470px);
+    color: aliceblue;
+
+
 }
