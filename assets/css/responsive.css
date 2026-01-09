@@ -1,8 +1,4 @@
-/* =========================
-   MOBILE HAMBURGER NAV (like your screenshot)
-   ========================= */
 
-/* Base nav */
 .site-nav {
     position: absolute;
     top: 0;
@@ -11,27 +7,23 @@
     z-index: 9999;
 }
 
-/* keep your desktop menu visible on desktop */
 .nav-desktop {
     display: block;
 }
 
-/* hamburger hidden on desktop */
+
 .nav-toggle,
 .nav-mobile-panel {
     display: none;
 }
 
 
-/* ============ MOBILE ============ */
 @media (max-width: 768px) {
 
-    /* hide desktop menu on mobile */
     .nav-desktop {
         display: none;
     }
 
-    /* hamburger button (top-right over hero) */
     .nav-toggle {
         display: flex;
         position: absolute;
@@ -47,13 +39,11 @@
         z-index: 10001;
     }
 
-    /* 3 lines */
     .nav-toggle span {
         display: block;
         width: 18px;
         height: 2px;
         background: rgba(255, 255, 255, 0.95);
-        /* white like screenshot */
         border-radius: 2px;
         position: absolute;
     }
@@ -70,12 +60,10 @@
         transform: translateY(6px);
     }
 
-    /* dropdown panel */
     .nav-mobile-panel {
         display: block;
         position: absolute;
         top: 64px;
-        /* below hamburger */
         left: 14px;
         right: 14px;
         background: #fff;
@@ -88,7 +76,6 @@
         z-index: 10000;
     }
 
-    /* close button top-right inside panel */
     .nav-close {
         position: absolute;
         top: 10px;
@@ -100,7 +87,6 @@
         color: #333;
     }
 
-    /* mobile links */
     .nav-mobile-links {
         list-style: none;
         margin: 0;
@@ -124,7 +110,6 @@
         letter-spacing: 1px;
     }
 
-    /* OPEN STATE */
     .site-nav.is-open .nav-mobile-panel {
         opacity: 1;
         transform: translateY(0);
@@ -133,17 +118,8 @@
 
     .site-nav.is-open .nav-toggle {
         opacity: 0;
-        /* hide hamburger when open (like screenshot) */
         pointer-events: none;
     }
-
-
-
-
-
-
-
-
 
 
 
@@ -163,7 +139,6 @@
         z-index: 10000 !important;
     }
 
-    /* hamburger button top-right */
     .nav-toggle {
         display: flex !important;
         position: absolute !important;
@@ -179,7 +154,6 @@
         z-index: 10001 !important;
     }
 
-    /* hamburger 3 lines */
     .nav-toggle span {
         display: block !important;
         width: 18px !important;
@@ -201,7 +175,6 @@
         transform: translateY(6px) !important;
     }
 
-    /* dropdown panel */
     .nav-mobile-panel {
         display: block !important;
         position: absolute !important;
@@ -224,13 +197,11 @@
         pointer-events: auto !important;
     }
 
-    /* hide hamburger when open */
     .site-nav.is-open .nav-toggle {
         opacity: 0 !important;
         pointer-events: none !important;
     }
 
-    /* close button */
     .nav-close {
         position: absolute !important;
         top: 10px !important;
@@ -242,7 +213,6 @@
         color: #333 !important;
     }
 
-    /* list style like screenshot */
     .nav-mobile-links {
         list-style: none !important;
         margin: 0 !important;
@@ -271,16 +241,13 @@
         margin: 0px;
     }
 
-    /* ---------------------------
-     HERO (like your screenshot)
-     --------------------------- */
+
     .hero {
         position: relative !important;
         max-width: 100% !important;
         margin: 0 !important;
     }
 
-    /* make hero image tall like mobile screenshot */
     .hero img {
         width: 100% !important;
         height: 100vh !important;
@@ -288,10 +255,9 @@
         display: block !important;
     }
 
-    /* title overlay center */
+
     .hero h1 {
         position: absolute !important;
-        /* <-- IMPORTANT (you missed this) */
         top: 50% !important;
         left: 50% !important;
         transform: translate(-50%, -50%) !important;
@@ -304,7 +270,6 @@
         margin: 0 !important;
     }
 
-    /* subtitle under title */
     .hero h2 {
         position: absolute !important;
         top: 58% !important;
@@ -320,7 +285,6 @@
     }
 
 
-    /* Extra small phones */
     @media (max-width: 420px) {
         .hero h1 {
             font-size: 1.6rem !important;
@@ -332,14 +296,6 @@
     }
 
 
-
-
-
-
-
-
-
-    /* ---------- VISION ---------- */
     .vision {
         padding: 50px 18px;
     }
@@ -357,14 +313,6 @@
     }
 
 
-    /* =========================================================
-     MESSAGE (MATCH YOUR SCREENSHOT)
-     Mobile order must ALWAYS be: Image -> Text
-     1st message already image->text in HTML
-     2nd message is text->image in HTML, so we reorder it
-     ========================================================= */
-
-    /* reset desktop layout */
     section.message {
         display: block !important;
         width: 100% !important;
@@ -382,7 +330,6 @@
         margin: 0 !important;
     }
 
-    /* image full width */
     section.message .msg-box.image {
         padding: 0 !important;
         background: transparent !important;
@@ -394,7 +341,6 @@
         display: block !important;
     }
 
-    /* white text box */
     section.message .msg-box.text {
         background: #fff !important;
         padding: 44px 22px !important;
@@ -417,12 +363,10 @@
         color: #333 !important;
     }
 
-    /* gap between the two message blocks */
     section.message+section.message {
         margin-top: 26px !important;
     }
 
-    /* IMPORTANT: reorder ONLY the 2nd .message (the one right after the first) */
     section.message+section.message {
         display: flex !important;
         flex-direction: column !important;
@@ -437,7 +381,6 @@
     }
 
 
-    /* ---------- SERVICES (stacked) ---------- */
     .services {
         padding: 60px 18px;
     }
@@ -462,7 +405,6 @@
     }
 
 
-    /* ---------- REASON (stacked) ---------- */
     .reason-section {
         width: 92%;
         margin: 60px auto;
@@ -496,7 +438,6 @@
     }
 
 
-    /* ---------- BG SECTION (stacked) ---------- */
     .bg-section {
         height: auto;
     }
@@ -517,7 +458,6 @@
     }
 
 
-    /* ---------- FOOTER (stacked) ---------- */
     .footer {
         padding: 70px 0 35px;
     }
@@ -541,9 +481,7 @@
 }
 
 
-/* =======================
-   EXTRA SMALL (<= 420px)
-   ======================= */
+
 @media (max-width: 420px) {
 
     .nav-links li {
@@ -573,53 +511,3 @@
 }
 
 
-
-/* =========================================
-   LAPTOP FIX (15.6" like 1366px width)
-   Put at the VERY END of responsive.css
-   ========================================= */
-@media (max-width: 1366px) {
-
-    /* SERVICES: make 3 circles fit nicely */
-    .services {
-        padding: 80px 20px;
-        /* smaller padding */
-    }
-
-    .service-item {
-        width: 20%;
-        /* instead of 17% (too tight) */
-        padding: 0 10px;
-        /* smaller side spacing */
-    }
-
-    .service-item img {
-        width: 210px;
-        /* smaller circle */
-        height: 210px;
-    }
-
-    .service-item h3 {
-        font-size: 1.1rem;
-
-    }
-
-    .service-item p {
-        font-size: 0.68rem;
-        line-height: 1.8;
-        text-align: center;
-        text-align: left;
-    }
-}
-
-/* If your laptop is even smaller (like 1280px) */
-@media (max-width: 1280px) {
-    .service-item {
-        width: 30%;
-    }
-
-    .service-item img {
-        width: 190px;
-        height: 190px;
-    }
-}
