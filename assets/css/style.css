@@ -1,10 +1,11 @@
 nav {
-    position: absolute;        
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;
-    z-index: 10;          
+    z-index: 10;
 }
+
 .nav-links {
     list-style: none;
     text-align: right;
@@ -21,16 +22,19 @@ nav {
     font-size: 1.03rem;
     margin-left: 15px;
 }
+
 .hero {
     position: relative;
     max-width: 70%;
     margin: 0 auto;
 }
+
 .hero img {
     width: 100%;
     height: auto;
     display: block;
 }
+
 .hero h1 {
     position: absolute;
     top: 45%;
@@ -52,6 +56,7 @@ nav {
     font-size: 1rem;
     text-align: center;
 }
+
 .vision {
     text-align: center;
     padding: 80px 20px;
@@ -64,46 +69,56 @@ nav {
 }
 
 .vision h4 {
-    max-width: 900px;       
-    margin: 0 auto;         
-    text-align: left;        
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
     font-weight: normal;
     line-height: 1.9;
     color: #333;
 }
 
 
-
-
 .message {
     width: 100%;
-    overflow: hidden;          /* clear floats */
+    overflow: hidden;
     font-family: 'Roboto', sans-serif;
+    background: rgb(247, 247, 247);
+    /* 🔥 wheat color full column */
+
 }
 
-/* common box */
+/* COMMON COLUMN */
 .msg-box {
     width: 50%;
     float: left;
     box-sizing: border-box;
+
 }
 
-/* image part */
+/* LEFT COLUMN – IMAGE SIDE */
+.msg-box.image {
+    background: #ffffff;
+    /* white background */
+    padding-bottom: 100px;
+    /* white space under image */
+}
+
 .msg-box.image img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* text part */
+/* RIGHT COLUMN – TEXT SIDE */
 .msg-box.text {
-    padding: 60px;
+    text-align: center;
+    padding: 80px;
+    min-height: 100%;
 }
 
 .msg-box.text h3 {
     margin-bottom: 20px;
     letter-spacing: 2px;
-    font-size: 1.2rem;
 }
 
 .msg-box.text p {
@@ -112,14 +127,14 @@ nav {
     color: #333;
 }
 
-/* MOBILE */
+/* RESPONSIVE (STACK LIKE BOOTSTRAP) */
 @media (max-width: 768px) {
     .msg-box {
         width: 100%;
     }
 
     .msg-box.text {
-        padding: 30px;
+        padding: 40px 30px;
     }
 }
 
