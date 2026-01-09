@@ -126,33 +126,177 @@
 
 
   
-  /* ---------- HERO ---------- */
+
+
+
+
+
+
+ .nav-links.nav-desktop{
+    display: none !important;
+  }
+
+  .site-nav{
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 10000 !important;
+  }
+
+  /* hamburger button top-right */
+  .nav-toggle{
+    display: flex !important;
+    position: absolute !important;
+    top: 14px !important;
+    right: 14px !important;
+    width: 44px !important;
+    height: 44px !important;
+    border: 0 !important;
+    background: transparent !important;
+    cursor: pointer !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10001 !important;
+  }
+
+  /* hamburger 3 lines */
+  .nav-toggle span{
+    display: block !important;
+    width: 18px !important;
+    height: 2px !important;
+    background: rgba(255,255,255,0.95) !important;
+    border-radius: 2px !important;
+    position: absolute !important;
+  }
+  .nav-toggle span:nth-child(1){ transform: translateY(-6px) !important; }
+  .nav-toggle span:nth-child(2){ transform: translateY(0) !important; }
+  .nav-toggle span:nth-child(3){ transform: translateY(6px) !important; }
+
+  /* dropdown panel */
+  .nav-mobile-panel{
+    display: block !important;
+    position: absolute !important;
+    top: 60px !important;
+    left: 12px !important;
+    right: 12px !important;
+    background: #fff !important;
+    border: 1px solid rgba(0,0,0,0.25) !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12) !important;
+    opacity: 0 !important;
+    transform: translateY(-10px) !important;
+    pointer-events: none !important;
+    transition: .2s ease !important;
+    z-index: 10000 !important;
+  }
+
+  .site-nav.is-open .nav-mobile-panel{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+  }
+
+  /* hide hamburger when open */
+  .site-nav.is-open .nav-toggle{
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* close button */
+  .nav-close{
+    position: absolute !important;
+    top: 10px !important;
+    right: 12px !important;
+    border: 0 !important;
+    background: transparent !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    color: #333 !important;
+  }
+
+  /* list style like screenshot */
+  .nav-mobile-links{
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 12px 0 !important;
+  }
+
+  .nav-mobile-links li{
+    border-top: 1px solid rgba(0,0,0,0.12) !important;
+  }
+  .nav-mobile-links li:first-child{
+    border-top: none !important;
+  }
+
+  .nav-mobile-links a{
+    display: block !important;
+    padding: 12px 14px !important;
+    text-decoration: none !important;
+    color: #333 !important;
+    font-size: 13px !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* ---------------------------
+     HERO (like your screenshot)
+     --------------------------- */
   .hero{
-    max-width: 100%;
-    margin: 0;
+    position: relative !important;
+    max-width: 100% !important;
+    margin: 0 !important;
   }
 
+  /* make hero image tall like mobile screenshot */
   .hero img{
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 100% !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    display: block !important;
   }
 
+  /* title overlay center */
   .hero h1{
-    top: 47%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 92%;
-    font-size: 1.7rem;
+    position: absolute !important;         /* <-- IMPORTANT (you missed this) */
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 90% !important;
+    text-align: center !important;
+    font-family: 'Pacifico', cursive !important;
+    color: #fff !important;
+    font-size: 2rem !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.35) !important;
+    margin: 0 !important;
   }
 
+  /* subtitle under title */
   .hero h2{
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 92%;
-    font-size: 0.95rem;
+    position: absolute !important;
+    top: 58% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 90% !important;
+    text-align: center !important;
+    font-family: 'Roboto', sans-serif !important;
+    color: rgba(255,255,255,0.95) !important;
+    font-size: 0.95rem !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.35) !important;
+    margin: 0 !important;
   }
+
+
+/* Extra small phones */
+@media (max-width: 420px){
+  .hero h1{ font-size: 1.6rem !important; }
+  .hero h2{ font-size: 0.85rem !important; }
+}
+
+
+
+
+
+
+
 
 
   /* ---------- VISION ---------- */
