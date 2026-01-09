@@ -1,0 +1,293 @@
+/* =========================
+   FULL MOBILE RESPONSIVE
+   Put this at the VERY END of responsive.css
+   ========================= */
+
+/* =======================
+   MOBILE (<= 768px)
+   ======================= */
+@media (max-width: 768px) {
+
+  /* ---------- NAV ---------- */
+  nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(6px);
+  }
+
+  .nav-links{
+    margin: 0;
+    padding: 12px 10px;
+    text-align: center;
+  }
+
+  .nav-links li{
+    display: inline-block;
+    margin: 6px 8px;
+  }
+
+  .nav-links li a{
+    font-size: 0.95rem;
+    margin-left: 0;
+  }
+
+
+  /* ---------- HERO ---------- */
+  .hero{
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .hero img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .hero h1{
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 92%;
+    font-size: 1.7rem;
+  }
+
+  .hero h2{
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 92%;
+    font-size: 0.95rem;
+  }
+
+
+  /* ---------- VISION ---------- */
+  .vision{
+    padding: 50px 18px;
+  }
+
+  .vision h1{
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+  }
+
+  .vision h4{
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.9;
+    text-align: left;
+  }
+
+
+  /* =========================================================
+     MESSAGE (MATCH YOUR SCREENSHOT)
+     Mobile order must ALWAYS be: Image -> Text
+     1st message already image->text in HTML
+     2nd message is text->image in HTML, so we reorder it
+     ========================================================= */
+
+  /* reset desktop layout */
+  section.message{
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #fff !important;
+    overflow: hidden !important;
+  }
+
+  section.message .msg-box{
+    width: 100% !important;
+    float: none !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+
+  /* image full width */
+  section.message .msg-box.image{
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  section.message .msg-box.image img{
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  /* white text box */
+  section.message .msg-box.text{
+    background: #fff !important;
+    padding: 44px 22px !important;
+    text-align: center !important;
+  }
+
+  section.message .msg-box.text h3{
+    margin: 0 0 18px !important;
+    letter-spacing: 2px !important;
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
+  section.message .msg-box.text p{
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    text-align: left !important;
+    font-size: 12px !important;
+    line-height: 1.9 !important;
+    color: #333 !important;
+  }
+
+  /* gap between the two message blocks */
+  section.message + section.message{
+    margin-top: 26px !important;
+  }
+
+  /* IMPORTANT: reorder ONLY the 2nd .message (the one right after the first) */
+  section.message + section.message{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  section.message + section.message .msg-box.image{ order: 1 !important; }
+  section.message + section.message .msg-box.text { order: 2 !important; }
+
+
+  /* ---------- SERVICES (stacked) ---------- */
+  .services{
+    padding: 60px 18px;
+  }
+
+  .service-item{
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0 auto 45px;
+  }
+
+  .service-item img{
+    width: 190px;
+    height: 190px;
+    margin: 0 auto 14px;
+  }
+
+  .service-item p{
+    font-size: 0.85rem;
+    text-align: center;
+    -webkit-line-clamp: 4;
+  }
+
+
+  /* ---------- REASON (stacked) ---------- */
+  .reason-section{
+    width: 92%;
+    margin: 60px auto;
+  }
+
+  .reason-content{
+    flex-direction: column;
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .reason-image{
+    width: 100%;
+  }
+
+  .reason-text h2{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .reason-text p{
+    font-size: 0.95rem;
+  }
+
+  .badge{
+    left: 10px;
+    top: -10px;
+    width: 52px;
+    height: 52px;
+    font-size: 1.2rem;
+  }
+
+
+  /* ---------- BG SECTION (stacked) ---------- */
+  .bg-section{
+    height: auto;
+  }
+
+  .bg-overlay{
+    height: auto;
+    padding: 55px 18px;
+  }
+
+  .bg-content{
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bg-box{
+    width: 100%;
+  }
+
+
+  /* ---------- FOOTER (stacked) ---------- */
+  .footer{
+    padding: 70px 0 35px;
+  }
+
+  .footer-wrap{
+    width: 90%;
+    margin: 0 auto 60px;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .footer-map iframe{
+    width: 100%;
+    height: 240px;
+  }
+
+  .footer-copy{
+    padding: 0 12px;
+  }
+}
+
+
+/* =======================
+   EXTRA SMALL (<= 420px)
+   ======================= */
+@media (max-width: 420px) {
+
+  .nav-links li{
+    margin: 5px 6px;
+  }
+
+  .hero h1{
+    font-size: 1.5rem;
+  }
+
+  .hero h2{
+    font-size: 0.85rem;
+  }
+
+  section.message .msg-box.text{
+    padding: 38px 18px !important;
+  }
+
+  section.message .msg-box.text p{
+    max-width: 300px !important;
+  }
+
+  .service-item img{
+    width: 170px;
+    height: 170px;
+  }
+}
