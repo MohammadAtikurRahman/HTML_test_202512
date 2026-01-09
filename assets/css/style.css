@@ -249,6 +249,7 @@ nav {
     display: flex;
     gap: 40px;
     padding: 40px;
+    padding-top: 10px;
 }
 
 /* IMAGE */
