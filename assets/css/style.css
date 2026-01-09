@@ -139,49 +139,44 @@ nav {
 
 
 
-.services {
-    width: 100%;
-    text-align: center;
-    padding: 100px 40px;
-    font-family: 'Roboto', sans-serif;
+.services{
+  width: 100%;
+  padding: 70px 40px;
+  font-family: 'Roboto', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;             /* spacing between 3 items */
+  flex-wrap: wrap;       /* if screen is smaller, it wraps nicely */
 }
 
-.service-item {
-    width: 17%;
-    display: inline-block;   /* 🔥 THIS CENTERS THEM */
-    box-sizing: border-box;
-    padding: 0 20px;
-    vertical-align: top;     /* keeps alignment clean */
+.service-item{
+  width: 260px;          /* fixed => same on all PCs */
+  text-align: center;
 }
 
-.service-item h3 {
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    font-size: 1.25rem;
-
+.service-item img{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
 }
 
-.service-item img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 20px;
+.service-item p{
+  font-size: 0.71rem;
+  line-height: 1.9;
+  color: #333;
+  text-align: left;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.service-item p {
-    font-size: 0.71rem;
-    line-height: 1.9;
-    color: #333;
-    text-align: left;
 
-    /* 🔥 limit to 4 lines */
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
 
 
 /* MOBILE */
